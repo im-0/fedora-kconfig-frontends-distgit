@@ -1,0 +1,12 @@
+diff -ru kconfig-frontends-4.11.0.1.a/libs/parser/hconf.c kconfig-frontends-4.11.0.1.b/libs/parser/hconf.c
+--- kconfig-frontends-4.11.0.1.a/libs/parser/hconf.c	2017-05-09 22:49:12.000000000 +0300
++++ kconfig-frontends-4.11.0.1.b/libs/parser/hconf.c	2018-02-05 21:54:59.265851535 +0300
+@@ -172,7 +172,7 @@
+ #endif
+ #endif
+ const struct kconf_id *
+-kconf_id_lookup (register const char *str, register unsigned int len)
++kconf_id_lookup (register const char *str, register GPERF_LEN_TYPE len)
+ {
+   enum
+     {
